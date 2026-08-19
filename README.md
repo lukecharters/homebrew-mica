@@ -5,18 +5,18 @@ A [Homebrew](https://brew.sh) tap for [Mica](https://github.com/lukecharters/Mic
 ## Install
 
 ```sh
-brew install --cask lukecharters/mica/mica
+brew tap lukecharters/mica
+brew trust lukecharters/mica
+brew install --cask mica
 ```
 
 That installs `Mica.app` into `/Applications` and links the bundled `mica-cli`
-onto your `PATH`, so both interfaces are available from one command.
+onto your `PATH`, so both interfaces arrive together.
 
-Tapping first works too, and is the same thing in two steps:
-
-```sh
-brew tap lukecharters/mica
-brew install --cask mica
-```
+The `brew trust` step is not specific to this tap. Homebrew refuses to load a
+cask from any third-party tap until it is trusted — `HOMEBREW_REQUIRE_TAP_TRUST`
+defaults to on — so without it `brew install` stops with *Refusing to load cask
+… from untrusted tap*. It is needed once per tap, not once per install.
 
 ## Upgrade
 
