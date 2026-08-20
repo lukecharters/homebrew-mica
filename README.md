@@ -14,9 +14,9 @@ That installs `Mica.app` into `/Applications` and links the bundled `mica-cli`
 onto your `PATH`, so both interfaces arrive together.
 
 The `brew trust` step is not specific to this tap. Homebrew refuses to load a
-cask from any third-party tap until it is trusted — `HOMEBREW_REQUIRE_TAP_TRUST`
+cask from any third-party tap until it is trusted - `HOMEBREW_REQUIRE_TAP_TRUST`
 defaults to on — so without it `brew install` stops with *Refusing to load cask
-… from untrusted tap*. It is needed once per tap, not once per install.
+… from untrusted tap*.
 
 ## Upgrade
 
@@ -33,11 +33,3 @@ brew uninstall --cask mica
 Add `--zap` to remove Mica's preferences and support files as well. Mica is
 sandboxed, so everything it stores lives in one container directory and `--zap`
 takes all of it.
-
-## Why a tap rather than homebrew/cask
-
-Homebrew's [package acceptance policy](https://github.com/Homebrew/brew/blob/master/docs/Package-Acceptance-Policy.md)
-asks a self-submitted project for 90 forks, 90 watchers or 225 stars. Mica is
-newer than that. The cask here is otherwise written to homebrew/cask's own
-rules and passes `brew audit --cask`, so it can move across largely unchanged
-once the thresholds are met.
