@@ -4,7 +4,7 @@ cask "mica" do
 
   url "https://github.com/lukecharters/Mica/releases/download/v#{version}/Mica-#{version}.dmg"
   name "Mica"
-  desc "The Mac-admin's Icon Creation App"
+  desc "The Mac admin's Icon Creation App"
   homepage "https://github.com/lukecharters/Mica"
 
   livecheck do
