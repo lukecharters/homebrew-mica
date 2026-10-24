@@ -1,6 +1,6 @@
 cask "mica" do
-  version "0.1"
-  sha256 "7dbf8dd38f225103ed979d795111df1f52728a4fb2f3b282ed34fd2af6d17dab"
+  version "0.2"
+  sha256 "64df31af01eae50c83a7231f4740823245fa3e4c6b9930a4777d43b79125f924"
 
   url "https://github.com/lukecharters/Mica/releases/download/v#{version}/Mica-#{version}.dmg"
   name "Mica"
